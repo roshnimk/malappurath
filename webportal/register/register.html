@@ -1,0 +1,20 @@
+<div ng-controller="registerController">
+    <h4>Registration form</h4>
+    <form name="loginForm">
+        <fieldset>
+            <legend>Personal information:</legend>
+            First name:
+            <input type="text" name="firstname" placeholder="case sensitive" ng-model="newUser.firstname"><br>
+            Last name:
+            <input type="text" name="lastname" placeholder="case sensitive" ng-model="newUser.lastname"><br>
+            User name:
+            <input type="text" name="username" placeholder="case sensitive" ng-model="newUser.username"><br>
+            email:
+            <input type="text" name="email"  ng-model="newUser.email"><br>
+            Password:
+            <input type="password" name="pwd" placeholder="case sensitive" ng-model="newUser.password" >
+            <br><br>
+            <input type="submit" value="register" ng-click=registerUser(newUser)>
+        </fieldset>
+    </form>
+</div>

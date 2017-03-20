@@ -1,0 +1,19 @@
+<div class="row" ng-controller="loginController">
+    <div class="col-sm-9" id="details">
+      A bank is a financial institution that accepts deposits from the public and creates credit.[1] Lending activities can be performed either directly or indirectly through capital markets. Due to their importance in the financial stability of a country, banks are highly regulated in most countries. Most nations have institutionalized a system known as fractional reserve banking under which banks hold liquid assets equal to only a portion of their current liabilities. In addition to other regulations intended to ensure liquidity, banks are generally subject to minimum capital requirements based on an international set of capital standards, known as the Basel Accords.
+    </div>
+    <div class="col-sm-3" id="login_form">
+        <form name="loginForm">
+            <fieldset>
+                <legend>Personal information:</legend>
+                User name:<br>
+                <input type="text" name="firstname" placeholder="case sensitive" ng-model="myUser">
+                <br> Password:<br>
+                <input type="password" name="pwd" placeholder="case sensitive" ng-model="myPwd">
+                <br><br>
+                <input type="submit" value="Submit" ng-click="login(myUser)">
+                <input type="submit" value="new user" ng-click=register()>
+            </fieldset>
+        </form>
+    </div>
+</div>

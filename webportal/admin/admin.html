@@ -1,0 +1,33 @@
+<div ng-controller="adminController" style="margin:15px">Admin's page {{username}}
+    <div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#addAccountForm">Add Account</a></li>
+            <li><a data-toggle="tab" href="#removeAccountForm">Remove Account</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <form id="addAccountForm" class="tab-pane fade in active">
+                <h3>Add Account</h3>
+                <fieldset>
+                    User name:
+                    <input type="text" name="userName" placeholder="case sensitive" ng-model="user.userName"><br> Account Number:
+                    <input type="text" name="accountNumber" ng-model="user.accountNumber"><br> Account Type:
+                    <input type="text" name="accountType" ng-model="user.accountType"><br> branch:
+                    <input type="text" name="branch" ng-model="user.branch"><br> Account Balance:
+                    <input type="number" name="accountBalance" ng-model="user.accountBalance">
+                    <br><br>
+                    <input type="submit" value="add" ng-click=addAccount(user)>
+                </fieldset>
+            </form>
+            <form id="removeAccountForm" class="tab-pane fade">
+                <h3>Remove Account</h3>
+                <fieldset>
+                    User name:
+                    <input type="text" name="userName" placeholder="case sensitive" ng-model="removeUser.userName"><br> Account Number:
+                    <input type="text" name="accountNumber" ng-model="removeUser.accountNumber"><br>
+                    <input type="submit" value="remove" ng-click=removeAccount(removeUser)>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

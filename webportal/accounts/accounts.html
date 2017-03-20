@@ -1,0 +1,21 @@
+<div ng-controller="accountsController">Welcome to your account page {{username}}
+    <div ng-if='isLoggedIn'>my account's table
+      <div class="red">Accounts with less balance are in red</div>
+      <!-- <div> Show <input type="number"  ng-model="recordNumber"> records in a page</div> -->
+        <table class="table table-bordered table-responsive" style="max-width:80%; margin: 50px">
+            <tr>
+                <th ng-click="sortingOrder='accountNumber'">Account Number</th>
+                <th ng-click="sortingOrder='accountType'">Account Type</th>
+                <th ng-click="sortingOrder='accountBalance'">Balance</th>
+            </tr>
+            <tr ng-model="sortingOrder" ng-repeat="account in pagedAccounts| orderBy:sortingOrder | limitTo:recordNumber" ng-class="{'red': account.accountBalance<10000}">
+                <td>{{ account.accountNumber }}</td>
+                <td>{{ account.accountType }}</td>
+                <td >{{account.accountBalance}}</td>
+            </tr>
+        </table>
+        <div>Page {{currentPage}} of {{totalPage}}</div>
+        <button  ng-click="paginate(-1)" ng-class="{'btn disabled': prev}">Prev</button>
+        <button ng-click="paginate(1)" ng-class="{'btn disabled': next}">Next</button>
+    </div>
+</div>

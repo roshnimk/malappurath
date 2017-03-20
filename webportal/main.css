@@ -1,0 +1,23 @@
+body{
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: arial;
+  height: 100%;
+}
+#login_form{
+  border: 1px solid black;
+  height: 100%;
+  padding: 15px;
+}
+#myheading{
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+#details{
+  text-align: justify;
+  padding:  35px
+}
+.red{
+  color:red;
+}
